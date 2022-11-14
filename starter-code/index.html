@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+        <link rel="stylesheet" href="./resources/reset.css">
+		<link rel="stylesheet" href="./resources/style.css" />
+        <link rel="stylesheet" href="./resources/media.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+		<title>Frontend Mentor | Memory game</title>
+	</head>
+	<body class="init">
+          <!-- Game setup start -->
+		<header class="header">
+			<h1 class="name">memory</h1>
+			<nav class="menu auto">
+				<button class="button mobile accent" onclick="handleMenuMobile()">Menu</button>
+				<button class="button desktop accent" onclick="restart()">Restart</button>
+				<button class="button desktop" onclick="newGame()">New Game</button>
+			</nav>
+		</header>
+		<nav class="menu-mobile-nav auto">
+			<div class="menu-mobile white">
+				<button class="button accent" onclick="restart()">Restart</button>
+				<button class="button" onclick="newGame()">New Game</button>
+				<button class="button" onclick="handleMenuMobile()">Resume Game</button>
+			</div>
+		</nav>
+		<section id="setup" class="white setup">
+			<form class="setup-form options" name="options">
+				<h2 class="option-title">Select Theme</h2>
+				<div class="panel-form panel__theme">
+					<div class="radio-input form-group">
+						<input type="radio" id="number-theme" name="theme" value="numbers" checked="checked" />
+						<label for="number-theme">Numbers</label>
+					</div>
+					<div class="radio-input form-group">
+						<input type="radio" id="icon-theme" name="theme" value="icons" />
+						<label for="icon-theme">Icons</label>
+					</div>
+				</div>
+				<h2 class="option-title">Numbers of players</h2>
+				<div class="panel-form panel__players">
+					<div class="radio-input form-group">
+						<input type="radio" id="players-one" name="players" value="1" checked="checked" />
+						<label for="players-one">1</label>
+					</div>
+					<div class="radio-input form-group">
+						<input type="radio" id="players-two" name="players" value="2" />
+						<label for="players-two">2</label>
+					</div>
+					<div class="radio-input form-group">
+						<input type="radio" id="players-three" name="players" value="3" />
+						<label for="players-three">3</label>
+					</div>
+					<div class="radio-input form-group">
+						<input type="radio" id="players-four" name="players" value="4" />
+						<label for="players-four">4</label>
+					</div>
+				</div>
+				<h2 class="option-title">Grid Size</h2>
+				<div class="panel-form panel__size">
+					<div class="radio-input form-group">
+						<input type="radio" id="size-four" name="size" value="4" checked="checked" />
+						<label for="size-four">4x4</label>
+					</div>
+					<div class="radio-input form-group">
+						<input type="radio" id="size-six" name="size" value="6" />
+						<label for="size-six">6x6</label>
+					</div>
+				</div>
+				<div class="panel-submit panel__start">
+					<div class="radio-input form-group">
+						<button class="start" type="submit">Start Game</button>
+					</div>
+				</div>
+			</form>
+		</section>
+		<section class="board"></section>
+		<section class="scores"></section>
+
+		<section class="wrapper">
+			<div class="popup white">
+				<div class="popup-head"></div>
+				<div class="results"></div>
+				<div class="flex">
+					<button class="button fg-1 accent" onclick="restart()">Restart</button> <button class="button fg-1" onclick="newGame()">Setup New Game</button>
+				</div>
+			</div>
+		</section>
+		<script src="./resources/main.js"></script>
+	</body>
+</html>

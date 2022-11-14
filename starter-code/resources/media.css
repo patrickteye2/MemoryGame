@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+    .header {
+        margin-top: min(24px, 3vw);
+      }
+
+    .mobile {
+      display: block;
+    }
+
+    .scores {
+        margin-bottom: min(24px, 3vw);
+      }
+
+      .scores .score .player-name {
+        width: 10px;
+        overflow: hidden;
+        display: inline-flex;
+      }
+  }
+
+  @media screen and (min-width: 768px) {
+    .desktop {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .scores .score {
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .card[data-size="4"] .back {
+      font-size: 56px;
+    }
+    }
+  
+
